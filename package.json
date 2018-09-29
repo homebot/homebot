@@ -1,0 +1,45 @@
+{
+  "name": "homebot",
+  "version": "1.0.0",
+  "description": "IoT platform for developing smart environments.",
+  "main": "index.js",
+  "scripts": {
+    "start": "export NODE_ENV=dev NODE_CONFIG_DIR=./src/config/ && nodemon -w src --exec \"babel-node src/app.js --presets es2015,stage-0\"",
+    "win-start": "set NODE_ENV=dev&& set NODE_CONFIG_DIR=./src/config/&& nodemon -w src --exec \"babel-node src/app.js --presets es2015,stage-0\"",
+    "test": "export NODE_ENV=test NODE_CONFIG_DIR=./src/config/ && mocha --timeout 10000 --compilers js:babel-core/register ./src/test/*.js ",
+    "populatedb": "babel-node --presets es2015 ./node_modules/pow-mongodb-fixtures/bin/mongofixtures node-express-skeleton-dev ./src/test/fixtures"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/homebot/homebot"
+  },
+  "keywords": [
+    "REST",
+    "API",
+    "Node.js",
+    "wordlist"
+  ],
+  "author": "Sergey Nikitin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/homebot/homebot/issues"
+  },
+  "homepage": "https://github.com/homebot/homebot#readme",
+  "dependencies": {
+    "bcrypt": "^3.0.0",
+    "body-parser": "^1.18.3",
+    "config": "^1.31.0",
+    "express": "^4.15.3",
+    "morgan": "^1.8.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "chai": "^4.1.2",
+    "chai-http": "^4.0.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.11.0"
+  }
+}
