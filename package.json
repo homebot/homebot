@@ -31,7 +31,8 @@
     "config": "^1.31.0",
     "express": "^4.15.3",
     "morgan": "^1.8.2",
-    "homebot-alisa": "homebot/homebot-alisa#master"
+    "homebot-alisa": "homebot/homebot-alisa#master",
+    "homebot-devices": "homebot/homebot-devices#master"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
