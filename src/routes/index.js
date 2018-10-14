@@ -1,13 +1,13 @@
-import express from 'express';
+const express = require('express');
 
 // import auth from './auth'; MOVE to users
 // import users from '../modules/users/routes';
 // import devices from '../modules/devices/routes';
 // import alisa from '../modules/alisa/routes';
-import alisa from 'homebot-alisa/src/routes';
-import devices from 'homebot-devices/src/routes';
+const alisa = require('../../node_modules/homebot-alisa/src/routes');
+const devices = require('../../node_modules/homebot-devices/src/routes');
 
-import response from '../helpers/response';
+const response = require('../helpers/response');
 
 const routes = express.Router();
 routes.use(response.setHeadersForCORS);

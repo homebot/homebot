@@ -4,10 +4,8 @@
   "description": "IoT platform for developing smart environments.",
   "main": "index.js",
   "scripts": {
-    "start": "export NODE_ENV=dev NODE_CONFIG_DIR=./src/config/ && nodemon -w src --exec \"babel-node src/app.js --presets es2015,stage-0\"",
-    "win-start": "set NODE_ENV=dev&& set NODE_CONFIG_DIR=./src/config/&& nodemon -w src --exec \"babel-node src/app.js --presets es2015,stage-0\"",
-    "test": "export NODE_ENV=test NODE_CONFIG_DIR=./src/config/ && mocha --timeout 10000 --compilers js:babel-core/register ./src/test/*.js ",
-    "populatedb": "babel-node --presets es2015 ./node_modules/pow-mongodb-fixtures/bin/mongofixtures node-express-skeleton-dev ./src/test/fixtures"
+    "start": "export NODE_ENV=dev NODE_CONFIG_DIR=./src/config/ && nodemon src/app.js",
+    "win-start": "set NODE_ENV=dev&& set NODE_CONFIG_DIR=./src/config/&& nodemon src/app.js"
   },
   "repository": {
     "type": "git",
@@ -35,10 +33,6 @@
     "homebot-devices": "homebot/homebot-devices#master"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1",
     "chai": "^4.1.2",
     "chai-http": "^4.0.0",
     "mocha": "^5.2.0",

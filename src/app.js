@@ -1,12 +1,12 @@
-import express from 'express';
-import bodyParser from 'body-parser';
-import morgan from 'morgan';
+const express = require('express');
+const bodyParser  = require('body-parser');
+const morgan  = require('morgan');
 
 // import User from './models/user';
 // import Device from './models/device'
 
-import config from 'config';
-import routes from './routes';
+const config = require('config');
+const routes = require('./routes');
 
 const app = express();
 
