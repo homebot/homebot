@@ -4,7 +4,7 @@ import express from 'express';
 // import users from '../modules/users/routes';
 // import devices from '../modules/devices/routes';
 // import alisa from '../modules/alisa/routes';
-import alisa from 'homebot-alisa/src/routes';
+// import alisa from 'homebot-alisa/src/routes';
 import devices from 'homebot-devices/src/routes';
 
 import response from '../helpers/response';
@@ -16,7 +16,7 @@ routes.use(response.setHeadersForCORS);
 // routes.use('/api/auth', auth);
 // routes.use('/users', users);
 routes.use('/devices', devices);
-routes.use('/api/alisa', alisa);
+// routes.use('/api/alisa', alisa);
 
 routes.use(function (req, res) {
   response.sendNotFound(res);
